@@ -24,17 +24,34 @@ export const SidebarData = [
     heading: "Content",
     children: [
       {
-        heading: 'Web Design',
-        url: 'web-design',
+        heading: 'Seerah Timeline',
+        url: 'Seerah-Timeline',
       },
       {
-        heading: 'Web Development',
-        url: 'web-dev',
+        heading: 'Other Prophet Timeline',
+        url: 'Other-Prophet-Timeline',
       },
       {
-        heading: 'SEO',
-        url: 'seo',
+        heading: 'Tafsir',
+        url: 'tafsir',
       },
+      {
+        heading: 'Quran Links',
+        url: 'Quran-Links',
+      },
+      {
+        heading: 'Miracles',
+        url: 'Miracles',
+      },
+      {
+        heading: 'Reflection Questions',
+        url: 'Reflection-Questions',
+      },
+      {
+        heading: 'About Us',
+        url: 'aboutUs',
+      },
+
     ],
   },
   {

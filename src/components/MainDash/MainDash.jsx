@@ -1,11 +1,13 @@
 import React from "react";
 import "./MainDash.css";
-const MainDash = () => {
+
+function MainDash({ OpenSidebar }) {
+
   return (
-    <div className="MainDash">
-      <h1>Dashboard</h1>
+      <div className='main-title'>
+        <h3>DASHBOARD</h3>
+      </div>
      
-    </div>
   );
 };
 

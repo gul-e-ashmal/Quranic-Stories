@@ -4,6 +4,7 @@
 :root {
   --background-primary-color: #e6d9cb;
   --background-secondary-color: #f6ede3;
+  --sidebar-background-color: #EFE1D5;
   --text-primary-color: #1b1b1b;
   --text-secondary-color: #666666;
   --text-heading-color: #1c0e02;
@@ -30,9 +31,9 @@
   display: grid;
   height: 100%;
   width: 100%;
-  background: var(--background-primary-color);
+  background: var(--background-secondary-color);
  
-  grid-template-columns: 20rem auto;
+  grid-template-columns: 30rem auto;
   overflow: hidden;
 }
 

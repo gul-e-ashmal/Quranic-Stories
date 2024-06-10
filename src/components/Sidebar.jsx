@@ -31,9 +31,7 @@ const Sidebar = () => {
                 {/* logo */}
                 <div className="logo">
                     <img src={Logo} alt="logo" />
-                    <span>
-                        Sh<span>o</span>ps
-                    </span>
+                    
                 </div>
 
                 <div className="menu">
@@ -42,24 +40,25 @@ const Sidebar = () => {
                             <div
                                 className={selected === index ? "menuItem active" : "menuItem"}
                                 key={index}
-                                onClick={() => setSelected(index)}
+                                onClick={() => {setSelected(index) 
+                                    } }
                             >
                                
                                 <span>{item.heading}</span>
                             
-                                {/* {item.children && (
+                                {item.children && (
                                     <div className="submenu">
                                         
                                             {item.children.map((child, childIndex) => (
-                                                <div className={childselected === childIndex ? "menuItem active" : "menuItem"}
+                                                <div className={childselected === childIndex ? "submenuItemactive" : "submenuItem"}
                                                     key={childIndex}
-                                                    onClick={() => setchildselected(childIndex) }>
+                                                    onClick={() => { setchildselected(childIndex) }}>
                                                     <span>{child.heading}</span>
                                                 </div>
                                             ))}
                                        
                                     </div>
-                                )} */}
+                                )}
                             </div>
                         );
                     })}
