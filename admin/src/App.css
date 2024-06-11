@@ -1,0 +1,72 @@
+:root {
+  --background-primary-color: #e6d9cb;
+  --background-secondary-color: #f6ede3;
+  --sidebar-background-color: #EFE1D5;
+  --text-primary-color: #1b1b1b;
+  --text-secondary-color: #666666;
+  --text-heading-color: #1c0e02;
+  --white-color: white;
+  --accent-color: #8f532e;
+  --card-color: #edddd0;
+  --linear-gradient: linear-gradient(180deg, #f7f2e7 0%, rgba(239, 232, 215, 0) 77.3%);
+  --base-font-family: "Poppins", sans-serif;
+  --heading-font-family: "DM Serif Display", serif
+}
+
+.sidebar {
+  background: var(--sidebar-background-color);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 4rem;
+  transition: all 300ms ease;
+}
+
+.body {
+  background-color: var(--background-primary-color);
+
+}
+
+/* logo */
+.bars {
+  display: none;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

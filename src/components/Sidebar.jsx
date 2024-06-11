@@ -7,7 +7,7 @@ import { UilBars } from "@iconscout/react-unicons";
 import { motion } from "framer-motion";
 const Sidebar = () => {
     const [selected, setSelected] = useState(0);
-    const [childselected, setchildselected] = useState(0);
+    const [childselected, setchildselected] = useState((selected,0));
     const [expanded, setExpaned] = useState(true)
 
     const sidebarVariants = {
@@ -50,9 +50,9 @@ const Sidebar = () => {
                                     <div className="submenu">
                                         
                                             {item.children.map((child, childIndex) => (
-                                                <div className={childselected === childIndex ? "submenuItemactive" : "submenuItem"}
+                                                <div className={selected === index && childselected === (selected,childIndex) ? "submenuItemactive" : "submenuItem"}
                                                     key={childIndex}
-                                                    onClick={() => { setchildselected(childIndex) }}>
+                                                    onClick={() => { setchildselected((selected,childIndex)) }}>
                                                     <span>{child.heading}</span>
                                                 </div>
                                             ))}

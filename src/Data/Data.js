@@ -56,6 +56,12 @@ export const SidebarData = [
   },
   {
     heading: "Settings",
+    children: [
+      {
+        heading: 'Users',
+        url: 'users',
+      },
+    ]
   },
   
 ];
