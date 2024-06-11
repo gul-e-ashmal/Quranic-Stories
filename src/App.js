@@ -1,6 +1,5 @@
 import "./App.css";
 import Sidebar from "./components/Sidebar";
-import MainDash from "./components/MainDash/MainDash";
 import React, { useState } from "react";
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
