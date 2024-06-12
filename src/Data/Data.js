@@ -61,7 +61,7 @@ export const SidebarData = [
       {
         id: 1,
         heading: "Users",
-        url: "Users",
+        url: "users",
       },
       {
         id: 2,
