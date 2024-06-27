@@ -1,7 +1,7 @@
 import React from "react";
 import EditNoteTwoToneIcon from "@mui/icons-material/EditNoteTwoTone";
 
-const SeerahLogTable = ({ logData ,setEdit}) => {
+const SeerahLogTable = ({ logData, setEdit, setEditInfo }) => {
   return (
     <section className=" mt-10">
       <table className="min-w-full  border border-black text-sm">
@@ -23,7 +23,14 @@ const SeerahLogTable = ({ logData ,setEdit}) => {
             <tr key={index} className=" border-b border-black ">
               <td className="py-2 px-4 border-b border-black ">
                 <span>{feature.Title}</span>
-                <EditNoteTwoToneIcon size={32} className=" float-end" onClick={()=>setEdit(true)} />
+                <EditNoteTwoToneIcon
+                  size={32}
+                  className=" float-end"
+                  onClick={() => {
+                    setEdit(true);
+                    setEditInfo(feature);
+                  }}
+                />
               </td>
               <td className="py-2 px-4 border-b border-black ">
                 {feature.LastEdit}
