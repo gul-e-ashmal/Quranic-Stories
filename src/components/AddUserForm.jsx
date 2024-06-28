@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "..//index.css";
 export const AddUserForm = ({ onSubmit }) => {
     return (
          <div>
@@ -17,13 +17,15 @@ export const AddUserForm = ({ onSubmit }) => {
                 <div className="form-group" >
                     <label htmlFor="checkboxAdmin" className='formLabel'>Access Group</label>
                     <div className="form-groupCheckbox">
+                        Select from below:
                         <div className="checkbox-wrapper">
                             <input
                             type="checkbox"
                             className="form-control"
                             id="checkboxAdmin"
                             
-                        /> <span>Admin</span>
+                            /> 
+                            <label htmlFor="checkboxAdmin">Admin</label>
                         </div>
                         <div className="checkbox-wrapper">
                         <input
@@ -31,7 +33,7 @@ export const AddUserForm = ({ onSubmit }) => {
                             className="form-control"
                             id="checkboxContent"
 
-                        /> <span>Content</span>
+                            />  <label htmlFor="checkboxContent">Content</label>
                         </div>
                         <div className="checkbox-wrapper">
                             <input
@@ -39,7 +41,7 @@ export const AddUserForm = ({ onSubmit }) => {
                             className="form-control"
                             id="checkboxDeveloper"
 
-                        /> <span>Developer</span>
+                            />  <label htmlFor="checkboxDeveloper">Developer</label>
                         </div>
                     </div>
             </div>

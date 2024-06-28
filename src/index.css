@@ -30,12 +30,92 @@
     -webkit-overflow-scrolling: touch;
 }
 .form-group{
-display: flex;
-    margin-top: 40px;
+    display: flex;
+        margin-top: 40px;
+        /* align-content: space-around; */
+        justify-content: space-between;
 }
 .form-groupCheckbox{
     display: flex;
-        margin-top: 40px;
+    /* margin-top: 40px; */
+    flex-direction: column;
+    width: 70%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.form-container {
+    padding: 1rem;
+    margin: 2rem auto;
+    background-color:  #fcfcfc;
+    border: 1px solid  #e6e6e6;
+    width: 50%;
+}
+
+/* HTML5 Boilerplate accessible hidden styles */
+.promoted-input-checkbox {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.promoted-checkbox {
+    input:checked+label>svg {
+        height: 24px;
+        animation: draw-checkbox ease-in-out 0.2s forwards;
+    }
+
+    label:active::after {
+        background-color:  #e6e6e6;
+    }
+
+    label {
+        color:  #000000;
+        line-height: 40px;
+        cursor: pointer;
+        position: relative;
+
+        &:after {
+            content: "";
+            height: 40px;
+            width: 40px;
+            margin-right: 1rem;
+            float: left;
+            border: 2px solid  #000000;
+            border-radius: 3px;
+            transition: 0.15s all ease-out;
+        }
+    }
+
+    svg {
+        stroke:  #000000;
+        stroke-width: 2px;
+        height: 0; 
+        width: 24px;
+        position: absolute;
+        left: -48px;
+        top: -4px;
+        stroke-dasharray: 33; 
+    }
+}
+
+@keyframes draw-checkbox {
+    0% {
+        stroke-dashoffset: 33;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+    }
 }
 .formLabel{
     font-family: General Sans;
@@ -47,7 +127,7 @@ display: flex;
 }
 .formTextBox{
     background: #F2E5DB;
-    width: 90%;
+    width: 70%;
     height: 35px;
     border-radius: 10px;
     margin-left: 20px;
