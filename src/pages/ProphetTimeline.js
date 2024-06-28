@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProphetTimeline = () => {
   return (
-    <div>ProphetTimeline</div>
+    <div>Prophet Timeline</div>
   )
 }
 

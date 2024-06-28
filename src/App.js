@@ -10,7 +10,7 @@ import {
   QuranLinks,
   ProphetTimeline,
   Tafsir,
-  SeerahTimeline,
+  SeerahTimeline, Users
 } from "./Data/Links";
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
               <Route path="Miracles" element={<Miracles />} />
               <Route path="Reflection-Questions" element={<ReflectionQuestion />} />
               <Route path="aboutUs" element={<AboutUs />} />
+              <Route path="users" element={<Users />} />
             </Routes>
           </div>
         </div>

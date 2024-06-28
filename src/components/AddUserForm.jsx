@@ -1,94 +1,72 @@
-import { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
-import Checkbox from './checkbox';
-function AddUserForm() {
-    // const { formState, getFormSubmitHandler } = useFormData('https://fund-family-backend-production.up.railway.app/?format=openapi');
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    // const submitForm = () => sub
-
+import React from 'react';
+import "..//index.css";
+export const AddUserForm = ({ onSubmit }) => {
     return (
-        <>
-            <Button variant="primary" onClick={handleShow}>
-               Add Users
-            </Button>
+         <div>
+            <h2>Add User</h2>
+         
+        <form onSubmit={onSubmit}>
+                <div className="form-group" >
+                    <label htmlFor="name" className='formLabel'>Name</label>
+                    <input className="form-control formTextBox" id="name" />
+            </div>
+                <div className="form-group" >
+                    <label htmlFor="name" className='formLabel'>Username</label>
+                    <input className="form-control formTextBox" id="username" />
+            </div>
+                <div className="form-group" >
+                    <label htmlFor="checkboxAdmin" className='formLabel'>Access Group</label>
+                    <div className="form-groupCheckbox">
+                        Select from below:
+                        <div className="checkbox-wrapper">
+                            <input
+                            type="checkbox"
+                            className="form-control"
+                            id="checkboxAdmin"
+                            
+                            /> 
+                            <label htmlFor="checkboxAdmin">Admin</label>
+                        </div>
+                        <div className="checkbox-wrapper">
+                        <input
+                            type="checkbox"
+                            className="form-control"
+                            id="checkboxContent"
 
-            <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                    <Modal.Title>Add Users</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <Form>
-                        <Row>
-                            <Col>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                    <Form.Label>Name</Form.Label>
-                                    <Form.Control
-                                    />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-                                    <Form.Label>Username</Form.Label>
-                                    <Form.Control
-                                    />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-                                    <Form.Label>Access Group</Form.Label>
-                                    <Checkbox label="Admin" />
-                                    <Checkbox label="Content" />
-                                    <Checkbox label="Developer" />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput3">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control
-                                    />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-                        <Row> <Col>
-                                <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                                    <Form.Label>Email address</Form.Label>
-                                    <Form.Control
-                                        type="email"
-                                        placeholder="name@example.com"
-                                        autoFocus
-                                    />
-                                </Form.Group>
-                            </Col>
-                        </Row>
-                       
-                        
-                    </Form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Close
-                    </Button>
-                    {/* {!!formState.status && <div className="py-2">Current form status is: {formState.status}</div>} */}
-                    <Button variant="primary" > {/* onClick={getFormSubmitHandler()}> */}
-                        Submit
-                    </Button>
-                </Modal.Footer>
-            </Modal>
-        </>
+                            />  <label htmlFor="checkboxContent">Content</label>
+                        </div>
+                        <div className="checkbox-wrapper">
+                            <input
+                            type="checkbox"
+                            className="form-control"
+                            id="checkboxDeveloper"
+
+                            />  <label htmlFor="checkboxDeveloper">Developer</label>
+                        </div>
+                    </div>
+            </div>
+                <div className="form-group" >
+                    <label htmlFor="name" className='formLabel'>Password</label>
+                    <input className="form-control formTextBox" id="password" type='password' />
+            </div>
+                <div className="form-group" >
+                    <label htmlFor="email" className='formLabel'>Email address</label>
+                <input
+                    type="email"
+                        className="form-control  formTextBox"
+                    id="email"
+                    placeholder="name@example.com"
+                />
+            </div>
+          
+    
+                <div className="form-group" >
+                <button className="form-control btn btn-primary" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+        </div>
     );
-}
-
+};
 export default AddUserForm;
