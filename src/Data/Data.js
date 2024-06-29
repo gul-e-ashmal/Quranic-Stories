@@ -1,17 +1,3 @@
-// Sidebar imports
-import {
-  UilEstate,
-  UilClipboardAlt,
-  UilUsersAlt,
-  UilPackage,
-  UilChart,
-  UilSignOutAlt,
-} from "@iconscout/react-unicons";
-
-// Analytics Cards imports
-import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
-import { keyboard } from "@testing-library/user-event/dist/keyboard";
-
 // Sidebar Data
 export const SidebarData = [
   {
@@ -114,5 +100,51 @@ export const EventsLogs = [
     Title: "His Nobel Feature",
     LastEdit: "6:00 01/02/03",
     User: "Mishell",
+  },
+];
+
+export const UserTableColoumn = ["Username", "Access Group", "Last Activity"];
+export const UserTable = [
+  {
+    Username: "User",
+    AccessGroup: "Admin",
+    LastActivity: "6/28/2024",
+  },
+  {
+    Username: "User",
+    AccessGroup: "Admin",
+    LastActivity: "6/28/2024",
+  },
+  {
+    Username: "User",
+    AccessGroup: "Admin",
+    LastActivity: "6/28/2024",
+  },
+];
+
+export const GroupPermissionTableColumn = [
+  "Group",
+  "Seerah",
+  "Prophet Stories",
+  "About Us",
+];
+export const GroupPermissionTable = [
+  {
+    Group: "Admin",
+    Seerah: { View: true, Change: true, Add: true, Delete: true },
+    ProphetStories: { View: true, Change: true, Add: true, Delete: true },
+    AboutUs: { View: true, Change: true, Add: true, Delete: true },
+  },
+  {
+    Group: "Admin",
+    Seerah: { View: true, Change: true, Add: true, Delete: true },
+    ProphetStories: { View: true, Change: true, Add: true, Delete: true },
+    AboutUs: { View: true, Change: true, Add: true, Delete: true },
+  },
+  {
+    Group: "Admin",
+    Seerah: { View: true, Change: true, Add: true, Delete: true },
+    ProphetStories: { View: true, Change: true, Add: true, Delete: true },
+    AboutUs: { View: true, Change: true, Add: true, Delete: true },
   },
 ];
