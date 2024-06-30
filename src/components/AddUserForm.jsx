@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Checkbox from './checkbox';
@@ -15,7 +15,7 @@ function AddUserForm() {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+            <Button className=" bg-[#8F532E] text-sm  rounded-3xl p-3 text-white " onClick={handleShow}>
                Add Users
             </Button>
 

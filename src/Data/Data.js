@@ -83,12 +83,12 @@ export const PhysicalFeaturesLogs = [
     User: "Mishell",
   },
   {
-    Title: "His Nobel Feature",
+    Title: "His Hairs",
     LastEdit: "6:00 01/02/03",
     User: "Mishell",
   },
   {
-    Title: "His Nobel Feature",
+    Title: "His His Bed",
     LastEdit: "6:00 01/02/03",
     User: "Mishell",
   },
@@ -106,12 +106,12 @@ export const EventsLogs = [
     User: "Mishell",
   },
   {
-    Title: "His Nobel Feature",
+    Title: "His Hairs",
     LastEdit: "6:00 01/02/03",
     User: "Mishell",
   },
   {
-    Title: "His Nobel Feature",
+    Title: "His His Bed",
     LastEdit: "6:00 01/02/03",
     User: "Mishell",
   },

@@ -21,10 +21,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <div className="AppGlass flex flex-row w-screen" >
-          <Sidebar className=" lg:max-w-[40%]"/>
+        <div className="AppGlass flex flex-row" >
+          <Sidebar className=""/>
 
-          <div className=" flex-1">
+          <div>
             <Routes>
               <Route path="Seerah-Timeline" element={<SeerahTimeline />} />
               <Route path="Other-Prophet-Timeline" element={<ProphetTimeline />} />
