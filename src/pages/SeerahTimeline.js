@@ -8,8 +8,8 @@ const SeerahTimeline = () => {
   const [Edit, setEdit] = useState(false);
   const [EditInfo, setEditInfo] = useState({});
   return (
-    <section className=" m-24 w-[70%]   ">
-      <h1 className=" font-semibold">Seerah Timeline</h1>
+    <section className="sm:m-24  w-[70%] max-sm:w-full max-sm:mt-24  ">
+      <h1 className=" font-semibold max-sm:m-2">Seerah Timeline</h1>
 
       {!Edit ? (
         <div>

@@ -1,11 +1,16 @@
 import React from "react";
 import EditNoteTwoToneIcon from "@mui/icons-material/EditNoteTwoTone";
+import ProphetLogTable from "../components/ProphetLogTable";
+import EditSeerahTimelineLog from "../components/EditSeerahTimelineLog";
 
 const ProphetTimeline = () => {
+  // const [Edit, setEdit] = useState(false);
   return (
-    <section className=" m-24 w-[70%]   ">
-      <h1 className=" font-semibold">Prophet Timeline</h1>
+    <section className="sm:m-24  w-[70%]   max-sm:w-full max-sm:mt-24 ">
+      <h1 className=" font-semibold max-sm:m-2">Prophet Timeline</h1>
 
+      {/* {!Edit ? (
+        <> */}
       <div className=" flex flex-row  gap-4 items-center m-4  max-w-[100%]">
         <EditNoteTwoToneIcon size={32} />
 
@@ -19,6 +24,12 @@ const ProphetTimeline = () => {
           </p>
         </div>
       </div>
+
+      <ProphetLogTable />
+      {/* </>
+      ) : (
+        <EditSeerahTimelineLog />
+      )} */}
     </section>
   );
 };

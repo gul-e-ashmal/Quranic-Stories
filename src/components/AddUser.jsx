@@ -3,7 +3,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import EditNoteTwoToneIcon from "@mui/icons-material/EditNoteTwoTone";
 import { useState } from "react";
 
-const AddUser = ({setEditUser}) => {
+const AddUser = ({ setEditUser, setEditUserInfo }) => {
   const [checkboxes, setCheckboxes] = useState([
     { id: 1, label: "Admin", checked: false },
     { id: 2, label: "Content", checked: false },
@@ -11,7 +11,7 @@ const AddUser = ({setEditUser}) => {
   ]);
 
   const handleCheckboxChange = (id) => {
-    setCheckboxes((prevCheckboxes) =>
+    setCheckboxes((prevCheckboxes) => 
       prevCheckboxes.map((checkbox) =>
         checkbox.id === id
           ? { ...checkbox, checked: !checkbox.checked }
@@ -21,11 +21,12 @@ const AddUser = ({setEditUser}) => {
   };
 
   const [formData, setFormData] = useState({
-    name: "",
-    username: "",
-    accessgroup: checkboxes,
-    password: "",
-    email: "",
+    Name: "",
+    Username: "",
+    AccessGroup: "",
+    Password: "",
+    Email: "",
+    LastActivity: Date.now(),
   });
 
   const handleChange = (e) => {
@@ -38,6 +39,18 @@ const AddUser = ({setEditUser}) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(checkboxes)
+    // let selectedNames = checkboxes
+    //   .filter((checkbox) => checkbox.checked)
+    //   .map((checkbox) => checkbox.label)
+    //   .join(", ");
+    // setFormData({
+    //   ...formData,
+    //   LastActivity: Date.now(),
+    //   AccessGroup: selectedNames,
+    // });
+    setEditUser(false);
+    setEditUserInfo(formData);
     // Handle form submission logic here
     console.log("Form submitted:", formData);
   };
@@ -45,7 +58,11 @@ const AddUser = ({setEditUser}) => {
     <section className=" flex absolute left-0 top-0  justify-center items-center h-full  w-full ">
       <div className=" absolute left-0 top-0 bg-black opacity-30 h-full  w-full z-0"></div>
       <div className=" bg-[#EDDDD0]    z-10 p-8">
-        <CloseIcon size={32} className=" float-end "  onClick={()=>setEditUser(false)}/>
+        <CloseIcon
+          size={32}
+          className=" float-end "
+          onClick={() => setEditUser(false)}
+        />
         <h1 className="font-semibold">Manage Users</h1>
 
         <form
@@ -53,7 +70,7 @@ const AddUser = ({setEditUser}) => {
           className="flex flex-col text-sm  mt-6 gap-1 "
         >
           <div className=" flex gap-8 mt-4 items-center ">
-            <label htmlFor="name" className=" font-semibold w-16">
+            <label htmlFor="Name" className=" font-semibold w-16">
               Name
             </label>
             <input
@@ -61,13 +78,13 @@ const AddUser = ({setEditUser}) => {
               className=" bg-[#F2E5DB] text-gray-500 rounded-md p-3  font-medium  w-72 text-sm"
               type="Type here..."
               id="name"
-              name="name"
-              value={formData.name}
+              name="Name"
+              value={formData.Name}
               onChange={handleChange}
             />
           </div>
           <div className=" flex gap-8 mt-4 items-center ">
-            <label htmlFor="username" className=" font-semibold w-16">
+            <label htmlFor="Username" className=" font-semibold w-16">
               Username
             </label>
             <input
@@ -75,13 +92,13 @@ const AddUser = ({setEditUser}) => {
               className=" bg-[#F2E5DB]  text-gray-500 rounded-md p-3  font-medium text-sm w-72"
               type="text"
               id="username"
-              name="username"
-              value={formData.username}
+              name="Username"
+              value={formData.Username}
               onChange={handleChange}
             />
           </div>
           <div className=" flex gap-8 mt-4  ">
-            <label htmlFor="accessgroup" className=" font-semibold w-16">
+            <label htmlFor="AccessGroup" className=" font-semibold w-16">
               Access Group
             </label>
             <div className=" mt-1">
@@ -102,7 +119,7 @@ const AddUser = ({setEditUser}) => {
             </div>
           </div>
           <div className=" flex gap-8 mt-4 items-center ">
-            <label htmlFor="password" className=" font-semibold w-16">
+            <label htmlFor="Password" className=" font-semibold w-16">
               Password
             </label>
             <input
@@ -110,14 +127,14 @@ const AddUser = ({setEditUser}) => {
               placeholder="Generated"
               type="password"
               id="password"
-              name="password"
-              value={formData.password}
+              name="Password"
+              value={formData.Password}
               onChange={handleChange}
             />
             <EditNoteTwoToneIcon size={32} />
           </div>
           <div className=" flex gap-8 mt-4 items-center ">
-            <label htmlFor="email" className=" font-semibold w-16">
+            <label htmlFor="Email" className=" font-semibold w-16">
               Email
             </label>
             <input
@@ -125,8 +142,8 @@ const AddUser = ({setEditUser}) => {
               placeholder="Type here ..."
               type="email"
               id="email"
-              name="email"
-              value={formData.email}
+              name="Email"
+              value={formData.Email}
               onChange={handleChange}
             />
           </div>

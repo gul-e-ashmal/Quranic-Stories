@@ -24,9 +24,9 @@ const AccountForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col text-sm  mt-6 gap-1 ">
+    <form onSubmit={handleSubmit} className="flex flex-col text-sm  mt-6 gap-1 max-sm:w-[90%] ">
       <div className=" flex gap-8 mt-4 items-center ">
-        <label htmlFor="name" className=" font-semibold w-16">
+        <label htmlFor="name" className=" font-semibold w-16 ">
           Name
         </label>
         <input
@@ -82,14 +82,14 @@ const AccountForm = () => {
           onChange={handleChange}
         />
       </div>
-      {/* <div className="flex-end"> */}
+      <div className=" self-end lg:self-center">
         <button
           type="submit"
-          className="  bg-[#8F532E] text-sm rounded-3xl p-3 text-white  m-2 max-w-48  ml-96  "
+          className="  bg-[#8F532E] text-sm rounded-3xl p-3 text-white  m-2 max-w-48 self-center "
         >
           Save Changes
         </button>
-      {/* </div> */}
+      </div>
     </form>
   );
 };

@@ -9,12 +9,12 @@ const Users = () => {
   const [EditUser, setEditUser] = useState(false);
   const [GroupPermission, setGroupPermission] = useState(false);
 
-  const [EditUserInfo, setEditUserInfo] = useState({});
+  const [EditUserInfo, setEditUserInfo] = useState(null);
   const [EditGroupInfo, setEditGroupInfo] = useState({});
   // ${EditUser ? "opacity-50" : ""}
   return (
-    <section className={`m-24 `}>
-      <h1 className="font-semibold">Manage Users</h1>
+    <section className={` sm:m-24  max-sm:w-full max-sm:mt-24 `}>
+      <h1 className="font-semibold max-sm:m-2">Manage Users</h1>
 
       <ManageUsersTable setEditUser={setEditUser} EditUserInfo={EditUserInfo} />
       {EditUser && (
@@ -25,7 +25,7 @@ const Users = () => {
         />
       )}
 
-      <h1 className="font-semibold">Permissions</h1>
+      <h1 className="font-semibold max-sm:m-2">Permissions</h1>
 
       <PermissionTable
         setGroupPermission={setGroupPermission}

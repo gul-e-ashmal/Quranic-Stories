@@ -25,10 +25,10 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <div className="AppGlass flex flex-row w-screen">
+        <div className="AppGlass flex flex-row w-screen ">
           <Sidebar className=" lg:max-w-[40%]" />
 
-          <div className=" flex-1  overflow-y-auto">
+          <div className=" sm:flex-1  overflow-y-auto  ">
             <Routes>
               <Route path="Seerah-Timeline" element={<SeerahTimeline />} />
               <Route

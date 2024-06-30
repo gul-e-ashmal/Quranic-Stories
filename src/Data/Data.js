@@ -148,3 +148,36 @@ export const GroupPermissionTable = [
     AboutUs: { View: true, Change: true, Add: true, Delete: true },
   },
 ];
+
+export const ProphetTimelineLogData = [
+  {
+    Name: "Adam",
+    Events: [
+      {
+        Title: "His Nobel Feature",
+        LastEdit: "6:00 01/02/03",
+        User: "Mishell",
+      },
+      {
+        Title: "His Nobel Feature",
+        LastEdit: "6:00 01/02/03",
+        User: "Mishell",
+      },
+    ],
+  },
+  {
+    Name: "Adam",
+    Events: [
+      {
+        Title: "His Nobel Feature",
+        LastEdit: "6:00 01/02/03",
+        User: "Mishell",
+      },
+      {
+        Title: "His Nobel Feature",
+        LastEdit: "6:00 01/02/03",
+        User: "Mishell",
+      },
+    ],
+  },
+];

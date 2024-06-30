@@ -3,7 +3,7 @@ import EditNoteTwoToneIcon from "@mui/icons-material/EditNoteTwoTone";
 
 const SeerahLogTable = ({ logData, setEdit, setEditInfo }) => {
   return (
-    <section className=" mt-10">
+    <section className=" mt-10 max-sm:ml-2 max-sm:mr-2">
       <table className="min-w-full  border border-black text-sm">
         <thead className=" bg-[#D8C5B1]">
           <tr>

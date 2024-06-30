@@ -11,7 +11,7 @@ const PermissionTable = ({setGroupPermission}) => {
       >
         Add Group
       </button>
-      <table className="min-w-full  border border-black text-sm ">
+      <table className="min-w-full  border border-black text-sm max-sm:ml-2 max-sm:mr-2 ">
         <thead className=" bg-[#D8C5B1]">
           <tr>
             {GroupPermissionTableColumn.map((ele, i) => (
